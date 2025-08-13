@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600"
+    height="300" viewBox="0 0 120 60">
+    <clipPath id="t">
+        <path d="M0,0V15H70V30H60zM0,30V40H30V0H60z" />
+    </clipPath>
+    <title>other</title>
+    <rect width="120" height="60" fill="#808080" />
+    <g stroke="#c8102e" stroke-width="6">
+</g>
+    <g transform="translate(30,15)">
+        <g transform="scale(5.10390485)">
+
+
+            <rect width="40" height="60" x="2" y="-20" fill="#ffff" />
+            <rect width="40" height="60" x="10" y="-20" fill="#808080" />
+        </g>
+    </g>
+</svg>
