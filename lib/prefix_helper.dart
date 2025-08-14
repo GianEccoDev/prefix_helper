@@ -6,6 +6,11 @@ extension _StringExtension on String {
   String get format => replaceAll(RegExp(r'\D'), '');
 }
 
+enum CountryType {
+  altro,
+  eu,
+}
+
 class CountryPrefix {
 // Austria - 0043
 // Belgio - 0032
@@ -36,64 +41,65 @@ class CountryPrefix {
 // Ungheria - 0036
 
   static CountryPrefix get altro =>
-      CountryPrefix._('', 'Altro', 'assets/flags/other.svg');
+      CountryPrefix._('', 'Altro', CountryType.altro, 'assets/flags/other.svg');
   static CountryPrefix austria =
-      CountryPrefix._('+43', 'Austria', 'assets/flags/aut.svg');
+      CountryPrefix._('+43', 'Austria', CountryType.eu, 'assets/flags/aut.svg');
   static CountryPrefix belgio =
-      CountryPrefix._('+32', 'Belgio', 'assets/flags/bel.svg');
-  static CountryPrefix bulgaria =
-      CountryPrefix._('+359', 'Bulgaria', 'assets/flags/bgr.svg');
+      CountryPrefix._('+32', 'Belgio', CountryType.eu, 'assets/flags/bel.svg');
+  static CountryPrefix bulgaria = CountryPrefix._(
+      '+359', 'Bulgaria', CountryType.eu, 'assets/flags/bgr.svg');
   static CountryPrefix cipro =
-      CountryPrefix._('+357', 'Cipro', 'assets/flags/cyp.svg');
-  static CountryPrefix croazia =
-      CountryPrefix._('+385', 'Croazia', 'assets/flags/hrv.svg');
-  static CountryPrefix danimarca =
-      CountryPrefix._('+45', 'Danimarca', 'assets/flags/dnk.svg');
-  static CountryPrefix estonia =
-      CountryPrefix._('+372', 'Estonia', 'assets/flags/est.svg');
-  static CountryPrefix finlandia =
-      CountryPrefix._('+358', 'Finlandia', 'assets/flags/fin.svg');
+      CountryPrefix._('+357', 'Cipro', CountryType.eu, 'assets/flags/cyp.svg');
+  static CountryPrefix croazia = CountryPrefix._(
+      '+385', 'Croazia', CountryType.eu, 'assets/flags/hrv.svg');
+  static CountryPrefix danimarca = CountryPrefix._(
+      '+45', 'Danimarca', CountryType.eu, 'assets/flags/dnk.svg');
+  static CountryPrefix estonia = CountryPrefix._(
+      '+372', 'Estonia', CountryType.eu, 'assets/flags/est.svg');
+  static CountryPrefix finlandia = CountryPrefix._(
+      '+358', 'Finlandia', CountryType.eu, 'assets/flags/fin.svg');
   static CountryPrefix francia =
-      CountryPrefix._('+33', 'Francia', 'assets/flags/fra.svg');
-  static CountryPrefix germania =
-      CountryPrefix._('+49', 'Germania', 'assets/flags/deu.svg');
+      CountryPrefix._('+33', 'Francia', CountryType.eu, 'assets/flags/fra.svg');
+  static CountryPrefix germania = CountryPrefix._(
+      '+49', 'Germania', CountryType.eu, 'assets/flags/deu.svg');
   static CountryPrefix grecia =
-      CountryPrefix._('+30', 'Grecia', 'assets/flags/grc.svg');
-  static CountryPrefix irlanda =
-      CountryPrefix._('+353', 'Irlanda', 'assets/flags/irl.svg');
+      CountryPrefix._('+30', 'Grecia', CountryType.eu, 'assets/flags/grc.svg');
+  static CountryPrefix irlanda = CountryPrefix._(
+      '+353', 'Irlanda', CountryType.eu, 'assets/flags/irl.svg');
   static CountryPrefix italia =
-      CountryPrefix._('+39', 'Italia', 'assets/flags/ita.svg');
-  static CountryPrefix lettonia =
-      CountryPrefix._('+371', 'Lettonia', 'assets/flags/lva.svg');
-  static CountryPrefix lituania =
-      CountryPrefix._('+370', 'Lituania', 'assets/flags/ltu.svg');
-  static CountryPrefix lussenburgo =
-      CountryPrefix._('+352', 'Lussemburgo', 'assets/flags/lux.svg');
+      CountryPrefix._('+39', 'Italia', CountryType.eu, 'assets/flags/ita.svg');
+  static CountryPrefix lettonia = CountryPrefix._(
+      '+371', 'Lettonia', CountryType.eu, 'assets/flags/lva.svg');
+  static CountryPrefix lituania = CountryPrefix._(
+      '+370', 'Lituania', CountryType.eu, 'assets/flags/ltu.svg');
+  static CountryPrefix lussenburgo = CountryPrefix._(
+      '+352', 'Lussemburgo', CountryType.eu, 'assets/flags/lux.svg');
   static CountryPrefix malta =
-      CountryPrefix._('+356', 'Malta', 'assets/flags/mlt.svg');
-  static CountryPrefix paesi_bassi =
-      CountryPrefix._('+31', 'Paesi bassi', 'assets/flags/nld.svg');
+      CountryPrefix._('+356', 'Malta', CountryType.eu, 'assets/flags/mlt.svg');
+  static CountryPrefix paesi_bassi = CountryPrefix._(
+      '+31', 'Paesi bassi', CountryType.eu, 'assets/flags/nld.svg');
   static CountryPrefix polonia =
-      CountryPrefix._('+48', 'Polonia', 'assets/flags/pol.svg');
-  static CountryPrefix portogallo =
-      CountryPrefix._('+351', 'Portogallo', 'assets/flags/prt.svg');
-  static CountryPrefix repubblica_ceca =
-      CountryPrefix._('+420', 'Repubblica Ceca', 'assets/flags/cze.svg');
+      CountryPrefix._('+48', 'Polonia', CountryType.eu, 'assets/flags/pol.svg');
+  static CountryPrefix portogallo = CountryPrefix._(
+      '+351', 'Portogallo', CountryType.eu, 'assets/flags/prt.svg');
+  static CountryPrefix repubblica_ceca = CountryPrefix._(
+      '+420', 'Repubblica Ceca', CountryType.eu, 'assets/flags/cze.svg');
   static CountryPrefix romania =
-      CountryPrefix._('+40', 'Romania', 'assets/flags/rou.svg');
-  static CountryPrefix slovacchia =
-      CountryPrefix._('+421', 'Slovacchia', 'assets/flags/svk.svg');
-  static CountryPrefix slovenia =
-      CountryPrefix._('+386', 'Slovenia', 'assets/flags/svn.svg');
+      CountryPrefix._('+40', 'Romania', CountryType.eu, 'assets/flags/rou.svg');
+  static CountryPrefix slovacchia = CountryPrefix._(
+      '+421', 'Slovacchia', CountryType.eu, 'assets/flags/svk.svg');
+  static CountryPrefix slovenia = CountryPrefix._(
+      '+386', 'Slovenia', CountryType.eu, 'assets/flags/svn.svg');
   static CountryPrefix spagna =
-      CountryPrefix._('+34', 'Spagna', 'assets/flags/esp.svg');
+      CountryPrefix._('+34', 'Spagna', CountryType.eu, 'assets/flags/esp.svg');
   static CountryPrefix svezia =
-      CountryPrefix._('+46', 'Svezia', 'assets/flags/swe.svg');
-  static CountryPrefix ungheria =
-      CountryPrefix._('+36', 'Ungheria', 'assets/flags/hun.svg');
+      CountryPrefix._('+46', 'Svezia', CountryType.eu, 'assets/flags/swe.svg');
+  static CountryPrefix ungheria = CountryPrefix._(
+      '+36', 'Ungheria', CountryType.eu, 'assets/flags/hun.svg');
 
-  String prefisso;
+  final String prefisso;
   final String stato;
+  final CountryType tipo;
   final String svg;
 
   static List<CountryPrefix> get values => <CountryPrefix>[
@@ -127,18 +133,27 @@ class CountryPrefix {
         CountryPrefix.ungheria,
       ];
 
-  CountryPrefix._(this.prefisso, this.stato, this.svg);
+  CountryPrefix._(this.prefisso, this.stato, this.tipo, this.svg);
 
-  static CountryPrefix find(
-          {String? prefix, String? stato, bool both = false}) =>
+  static CountryPrefix find({String? prefix, String? stato}) =>
       CountryPrefix.values.firstWhere(
-        (element) => both
-            ? element.prefisso.format == prefix?.format &&
-                element.stato.toLowerCase() == stato?.toLowerCase()
+        (element) => prefix != null && stato != null
+            ? element.prefisso.format == prefix.format &&
+                element.stato.toLowerCase() == stato.toLowerCase()
             : element.prefisso.format == prefix?.format ||
                 element.stato.toLowerCase() == stato?.toLowerCase(),
         orElse: () => CountryPrefix.altro,
       );
+
+  static List<CountryPrefix> filter(String data) => data.isNotEmpty
+      ? values
+          .where((element) =>
+              (element.prefisso.format.startsWith(data.format) &&
+                  int.tryParse(data) != null) ||
+              (element.stato.toLowerCase().startsWith(data.toLowerCase()) &&
+                  element.stato.toLowerCase().contains(data.toLowerCase())))
+          .toList()
+      : CountryPrefix.values;
 
   @override
   String toString() =>
@@ -166,9 +181,17 @@ class Telephone {
 
   String get prefix => _prefix.prefisso;
 
+  /// SVG
+  ///
+  /// usa " package: '' " in SvgPicture.asset per usare la bandiera
+  ///
+  /// SvgPicture.asset( Telephone(prefix: '39', number: 'number').flag, ----> package: '' <----, height: 100),
+
   String get flag => 'prefix_helper/${_prefix.svg}';
 
-  String get state => _prefix.svg;
+  String get state => _prefix.stato;
+
+  CountryType get country => _prefix.tipo;
 
   Telephone copyWith({
     String? number,
@@ -196,7 +219,8 @@ class Telephone {
   }
 
   @override
-  String toString() => 'Telephone(number: $number, prefix: $_prefix)';
+  String toString() =>
+      'Telephone(number: $number, prefix: ${_prefix.prefisso} [${_prefix.stato}])';
 
   @override
   bool operator ==(covariant Telephone other) {
